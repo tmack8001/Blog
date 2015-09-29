@@ -39,7 +39,6 @@
                <span class="hidden">Menu</span>
                </button>
                <ul id="main-menu" class="nav-collapse closed">
-                   <li><a href="//ghost.org/features/">Features</a></li>
                    <li><a href="//ghost.org/about/">About</a></li>
                    <li><a href="http://marketplace.ghost.org">Marketplace</a></li>
                    <li><a href="http://support.ghost.org/">Support</a></li>
@@ -107,17 +106,9 @@
 
     {{ghost_foot}}
 
-    <script type="text/javascript">
-        function replaceHeader (content) {
-            $(document).ready(function() {
-                $("#global-header > nav > .wrapper").replaceWith(content);
-                $("#global-header > nav > .wrapper").fadeIn();
-            });
-        }
-    </script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
     <script src="https://ghost.org/navigation/"></script>
 
-    <script type="text/javascript" src="https://ghost.org/assets/application-f70a08abb1fd9fbfdd4ae25ddd2c3d6b.js"></script>
     <script type="text/javascript" src="{{asset "js/jquery.fitvids.js"}}"></script>
     <script type="text/javascript" src="{{asset "js/prism.js"}}"></script>
     <script type="text/javascript" src="{{asset "js/index.js"}}"></script>
