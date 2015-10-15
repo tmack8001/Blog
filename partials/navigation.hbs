@@ -1,0 +1,23 @@
+<header id="global-header" class="global-header navbar">
+    <nav role="navigation">
+        <div class="wrapper">
+            {{#if @blog.logo}}
+                <a class="blog-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="{{@blog.title}}" /></a>
+            {{else}}
+                <a href="{{@blog.url}}"><span class="blog-title">{{@blog.title}}</span></a>
+            {{/if}}
+            <button type="button" class="mobile-menu" data-toggle="closed" data-target=".nav-collapse">
+                <span class="hidden">Menu</span>
+            </button>
+            <ul id="main-menu" class="nav-collapse closed">
+                <!-- Loop through the navigation items -->
+                {{#foreach navigation}}
+                    <li class="nav-{{slug}}{{#if current}} nav-current{{/if}}" role="presentation">
+                        <a href="{{url absolute="true"}}">{{label}}</a>
+                    </li>
+                {{/foreach}}
+                <!-- End the loop -->
+            </ul>
+        </div>
+    </nav>
+</header>

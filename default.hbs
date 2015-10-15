@@ -39,29 +39,8 @@
     <aside class="subscribe-banner">
         Want to keep up to date weekly with more great posts? &nbsp;<a class="button" data-toggle="modal" data-target="#blogsubscribe">Subscribe</a>
     </aside>
-    <header id="global-header" class="global-header navbar">
-       <nav role="navigation">
-           <div class="wrapper">
-               {{#if @blog.logo}}
-                   <a class="blog-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="{{@blog.title}}" /></a>
-               {{else}}
-                   <a href="{{@blog.url}}"><span class="blog-title">{{@blog.title}}</span></a>
-               {{/if}}
-               {{#if @blog.navigation}}
-                   <button type="button" class="mobile-menu" data-toggle="closed" data-target=".nav-collapse">
-                       <span class="hidden">Menu</span>
-                   </button>
-                   <ul id="main-menu" class="nav-collapse closed">
-                       {{#foreach navigation}}
-                           <li class="nav-{{slug}}{{#if current}} nav-current{{/if}}" role="presentation">
-                               <a href="{{url absolute="true"}}">{{label}}</a>
-                           </li>
-                       {{/foreach}}
-                   </ul>
-               {{/if}}
-           </div>
-        </nav>
-    </header>
+
+    {{navigation}}
 
     <main role="main">
         <div class="page-wrapper">
