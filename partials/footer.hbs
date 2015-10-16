@@ -1,0 +1,21 @@
+<footer id="global-footer">
+    <nav id="footer-nav" role="navigation">
+            <ul id="footer-menu">
+                {{#if @blog.logo}}
+                    <li class="logo"><a href="{{@blog.url}}"><img alt="{{@blog.title}}" src="{{@blog.logo}}"></a></li>
+                {{/if}}
+                {{#if @blog.navigation}}
+                    {{#foreach navigation}}
+                        <li><a href="{{url absolute="true"}}">{{label}}</a></li>
+                    {{/foreach}}
+                {{/if}}
+            </ul>
+        <div class="clearfix"></div>
+
+        <span class="poweredby"> Powered <em>by</em> <a href="https://ghost.org" target="_blank"><img alt="Ghost" src="https://ghost.org/assets/logo-minighost-0f5476cf6a52adff2f2a67e4f16d3e29.png"></a></span>
+
+        {{> custom/social-menu}}
+
+    </nav>
+    <div class="clearfix"></div>
+</footer>
